@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "nombre": "HACK 03 COMFORT 23",
+        "precio": 38000,
+        "marca": "Bullpadel",
+        "stock": 3,
+        "rutaImg": "/paleta-1.png"
+    },
+    {
+        "id": 2,
+        "nombre": "HACK 03 23",
+        "precio": 55000,
+        "marca": "Bullpadel",
+        "stock": 5,
+        "rutaImg": "/paleta-2.png"
+    },
+    {
+        "id": 3,
+        "nombre": "VERTEX 03 CTR 23",
+        "precio": 35000,
+        "marca": "Bullpadel",
+        "stock": 5,
+        "rutaImg": "/paleta-3.png"
+    },
+    {
+        "id": 4,
+        "nombre": "VERTEX 03 23",
+        "precio": 50000,
+        "marca": "Bullpadel",
+        "stock": 5,
+        "rutaImg": "/paleta-4.png"
+    },
+    {
+        "id": 5,
+        "nombre": "PRO LIGTH WOMAN",
+        "precio": 15000,
+        "marca": "Royal Padel",
+        "stock": 5,
+        "rutaImg": "/paleta-5.png"
+    },
+    {
+        "id": 6,
+        "nombre": "EUROPE MASTER PRO",
+        "precio": 28000,
+        "marca": "Royal Padel",
+        "stock": 5,
+        "rutaImg": "/paleta-6.png"
+    },
+    {
+        "id": 7,
+        "nombre": "ML10 PRO",
+        "precio": 45000,
+        "marca": "Nox",
+        "stock": 5,
+        "rutaImg": "/paleta-7.png"
+    },
+    {
+        "id": 8,
+        "nombre": "AMERICA VS EUROPA",
+        "precio": 44000,
+        "marca": "Nox",
+        "stock": 5,
+        "rutaImg": "/paleta-8.png"
+    },
+    {
+        "id": 9,
+        "nombre": "AIR VIPER",
+        "precio": 40000,
+        "marca": "Babolat",
+        "stock": 5,
+        "rutaImg": "/paleta-9.png"
+    },
+    {
+        "id": 10,
+        "nombre": "METALBONE HRD",
+        "precio": 38000,
+        "marca": "Adidas",
+        "stock": 5,
+        "rutaImg": "/paleta-10.png"
+    },
+    {
+        "id": 11,
+        "nombre": "MATCH 3.1",
+        "precio": 17000,
+        "marca": "Adidas",
+        "stock": 5,
+        "rutaImg": "/paleta-11.png"
+    },
+    {
+        "id": 12,
+        "nombre": "DRIVE LIGTH 3.1",
+        "precio": 9000,
+        "marca": "Adidas",
+        "stock": 5,
+        "rutaImg": "/paleta-12.png"
+    }
+]

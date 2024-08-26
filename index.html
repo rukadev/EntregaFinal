@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- enlace font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <!-- link css toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- link css -->
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Entrega final</title>
+</head>
+<body>
+    <main class="main-paletas">
+        <section class="titulo">
+            <h1>Paletas</h1>
+            <h2>Las mejores paletas al mejor precio</h2>
+        </section>
+        <div class="btn-carrito">
+            <button id="verCarrito">CARRITO</button>
+        </div>
+        <div id="paginaProductos" class="cont-filtros">
+            <div class="filtros">
+                <div id="filtros" class="fill">
+                    <h3>Marcas</h3>
+                    <button id="todos" value="">Todas</button>
+                </div>
+                <div class="buscar">
+                    <input id="buscador" type="text" placeholder="Nombre del producto" />
+                    <button id="buscar">Buscar</button>
+                </div>
+            </div>
+            <section id="productos" class="grilla"></section>
+        </div>
+        <!-- Carrito -->
+        <div id="paginaCarrito" class="oculto">
+            <div id="contenedorCarrito" class="contenedorCarrito"></div>
+            <div id="total">
+            </div>
+            <div class="btn-compra">
+                <button id="comprar">COMPRAR</button>
+            </div>
+        </div>
+    </main>
+    <!-- Scipt sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Scipt toastify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- Scipt main -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
