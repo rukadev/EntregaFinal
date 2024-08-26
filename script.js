@@ -1,4 +1,4 @@
-fetch("./../data.json")
+fetch("./data.json")
     .then(response => response.json())
     .then(productos => principal(productos))
     .catch(error => console.log(error))
