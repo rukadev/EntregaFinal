@@ -5,6 +5,7 @@ fetch("./data.json")
 
 // función principal del programa.
 function principal(paletas) {
+    localStorage.setItem('paletas', JSON.stringify(paletas))
     productos(paletas)
     filtrosCategoria(paletas)
     let carrito = obtenerCarrito()
@@ -14,7 +15,7 @@ function principal(paletas) {
     let botonBuscar = document.getElementById("buscar")
     botonBuscar.addEventListener("click", () => filtrarPorNombre(paletas, input.value))
     let verCarrito = document.getElementById("verCarrito")
-    verCarrito.addEventListener("click", verOcultar)
+    verCarrito.addEventListener("click", (e) => verOcultar (e, paletas))
     let botonComprar = document.getElementById("comprar")
     botonComprar.addEventListener("click", finalizarComprar)
 }
@@ -62,11 +63,12 @@ function filtrosCategoria(paletas) {
 }
 
 // función para ocultar los productos y ver el carrito.
-function verOcultar(e) {
+function verOcultar(e, paletas) {
     if (e.target.innerText === "CARRITO") {
         e.target.innerText = "PRODUCTOS"
     } else {
         e.target.innerText = "CARRITO"
+        localStorage.setItem('paletas', JSON.stringify(paletas))
     }
     let contenedorProductos = document.getElementById("paginaProductos")
     let contenedorCarrito = document.getElementById("paginaCarrito")
@@ -181,9 +183,9 @@ function renCarrito(carrito, paletas) {
         btnEliminar.addEventListener("click", (e) => eliminarProducto(e))
         montoTotal(carrito)
         let botonResta = document.getElementById("ru" + id)
-        botonResta.addEventListener("click", (e) => restarUnidad(e, paletas))
+        botonResta.addEventListener("click", (e) => restarUnidad(e))
         let botonSuma = document.getElementById("su" + id)
-        botonSuma.addEventListener("click", (e) => sumarUnidad(e, paletas))
+        botonSuma.addEventListener("click", (e) => sumarUnidad(e))
     })
 }
 
@@ -198,6 +200,7 @@ function finalizarComprar() {
         let icon = "success"
         let confirmButtonText = "Aceptar"
         localStorage.removeItem("carrito")
+        localStorage.removeItem("paletas")
         contenedorCarrito.innerHTML = ""
         contenedorTotal.innerText = ""
         alertaSweet(title, text, icon, confirmButtonText)
@@ -212,9 +215,10 @@ function finalizarComprar() {
 }
 
 // función para sumar unidades dentro del carrito.
-function sumarUnidad(e, paletas) {
+function sumarUnidad(e) {
     let id = Number(e.target.id.substring(2))
     let carrito = obtenerCarrito()
+    let paletas = obtenerPaletas()
     let productoOriginal = paletas.find(producto => producto.id === id)
     let productoCarrito = carrito.find(producto => producto.id === id)
     if (productoOriginal.stock > productoCarrito.unidades) {
@@ -231,6 +235,10 @@ function sumarUnidad(e, paletas) {
     }
     setearCarrito(carrito)
     renCarrito(carrito, paletas)
+}
+
+function obtenerPaletas() {
+    return JSON.parse(localStorage.getItem('paletas')) || []
 }
 
 // función para restar unidades dentro del carrito.
